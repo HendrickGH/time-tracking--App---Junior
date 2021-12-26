@@ -1,0 +1,220 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Blue: hsl(246, 80%, 60%)
+
+- Light red (work): hsl(15, 100%, 70%)
+- Soft blue (play): hsl(195, 74%, 62%)
+- Light red (study): hsl(348, 100%, 68%)
+- Lime green (exercise): hsl(145, 58%, 55%)
+- Violet (social): hsl(264, 64%, 52%)
+- Soft orange (self care): hsl(43, 84%, 65%)
+
+### Neutral
+
+- Very dark blue: hsl(226, 43%, 10%)
+- Dark blue: hsl(235, 46%, 20%)
+- Desaturated blue: hsl(235, 45%, 61%)
+- Pale Blue: hsl(236, 100%, 87%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 18px (card titles e.g. Work, Play)
+
+### Font
+
+- Family: [Rubik](https://fonts.google.com/specimen/Rubik)
+- Weights: 300, 400, 500
+*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: 'Rubik', sans-serif;
+	background-color: #0f1424;
+}
+.main {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.section {
+	display: grid;
+	height: 38rem;
+	width: 100rem;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 2.4rem;
+}
+.card {
+	grid-row: 1 / -1;
+	background-color: #1c1f4a;
+	border-radius: 0.8rem;
+}
+.reporter {
+	background-color: #5847eb;
+	padding: 2.4rem;
+	border-radius: inherit;
+}
+.jeremy-report {
+	width: 6.4rem;
+	height: 6.4rem;
+	border: 2px solid #fff;
+	border-radius: 10000rem;
+	margin-bottom: 2.4rem;
+}
+.report {
+	color: #bdc1ff;
+	font-weight: 500;
+}
+.reporter-author {
+	color: #fff;
+	font-size: 3.2rem;
+	font-weight: 300;
+	margin-bottom: 3.6rem;
+}
+.nav {
+	color: #bdc1ff;
+	font-weight: 400;
+	font-size: 1.2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1.2rem;
+	margin: 2.4rem;
+}
+.text-nav {
+	cursor: pointer;
+}
+.text-nav.active {
+	color: #fff;
+	font-weight: 400;
+}
+.mini-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	border-radius: 0.8rem;
+	background-repeat: no-repeat;
+	background-position: 90% -15%;
+}
+.mini-card {
+	height: 100%;
+}
+.mini-card:nth-of-type(2) {
+	background-image: url(images/icon-work.svg);
+	background-color: #ff8c66;
+}
+.mini-card:nth-of-type(3) {
+	background-image: url(images/icon-play.svg);
+	background-color: #56c2e6;
+}
+.mini-card:nth-of-type(4) {
+	background-image: url(images/icon-study.svg);
+	background-color: #ff5c7c;
+}
+.mini-card:nth-of-type(5) {
+	background-image: url(images/icon-exercise.svg);
+	background-color: #4acf81;
+}
+.mini-card:nth-of-type(6) {
+	background-image: url(images/icon-social.svg);
+	background-color: #7536d3;
+}
+.mini-card:nth-of-type(7) {
+	background-image: url(images/icon-self-care.svg);
+	background-color: #f1c65b;
+}
+.container-mini-card {
+	background-color: #1c1f4a;
+	border-radius: 0.6rem;
+	color: #fff;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+.container-mini-card:hover {
+	background-color: #2d327c;
+}
+.container-text {
+	margin: 1.6rem;
+}
+.title-mini-card {
+	font-weight: 400;
+	font-size: 1.6rem;
+}
+.container-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1.2rem;
+}
+.hours {
+	font-size: 4.8rem;
+	margin-bottom: 1.2rem;
+	font-weight: 300;
+}
+.time {
+	font-weight: 300;
+	color: #bdc1ff;
+}
+@media (max-width: 41em) {
+	.main {
+		align-items: flex-start;
+		margin: 3.2rem 0;
+	}
+	.section {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(7, 1fr);
+		height: initial;
+		width: initial;
+	}
+	.reporter {
+		display: flex;
+		align-items: center;
+		gap: 2.4rem;
+	}
+	.reporter-author {
+		margin-bottom: 0;
+	}
+	.jeremy-report {
+		margin-bottom: 0;
+	}
+	.mini-card {
+		background-position: 90% -5%;
+	}
+	.card {
+		grid-row: 1;
+	}
+	.nav {
+		flex-direction: row;
+		justify-content: space-around;
+	}
+	.container-time {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.time {
+		font-size: 1.4rem;
+	}
+}
